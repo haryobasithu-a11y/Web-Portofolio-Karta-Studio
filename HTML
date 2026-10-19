@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karta Studio — Desain Grafis & Identitas Brand</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CUSTOM GLOW CURSOR (HANYA AKTIF DI DESKTOP) -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <!-- CANVAS BACKGROUND EFFECT -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <a href="#" class="logo">
+            <span class="logo-symbol">⚡</span> KARTA<span class="dot">.</span>STUDIO
+        </a>
+        <nav class="nav-links" id="nav-links">
+            <a href="#about" class="nav-link">Tentang</a>
+            <a href="#services" class="nav-link">Layanan Desain</a>
+            <a href="#team" class="nav-link">Tim</a>
+            <a href="#portfolio" class="nav-link">Karya</a>
+            <a href="#identity" class="nav-link">Identitas</a>
+            <a href="#contact" class="nav-link btn-nav">Diskusi Proyek <i class="fas fa-arrow-right"></i></a>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-badge">
+            <span class="status-pulse"></span> Studio Desain Grafis · Terbuka untuk Kolaborasi
+        </div>
+        <h1 class="hero-title">
+            Ide Usaha Punya Wajah Baru <br>
+            <span class="gradient-text typewrite" data-words='["Logo UMKM", "Poster Promosi", "Banner Usaha", "Identitas Brand"]'>Logo UMKM.</span>
+        </h1>
+        <p class="hero-desc">
+            <strong>Karta Studio</strong> adalah studio desain grafis yang digerakkan oleh lima talenta kreatif.
+            Kami membantu UMKM membangun tampilan brand melalui desain logo, identitas visual, poster, banner, dan materi promosi.
+        </p>
+        <div class="hero-btns">
+            <a href="#portfolio" class="btn btn-primary magnetic-btn">
+                <span>Lihat Karya</span> <i class="fas fa-arrow-down"></i>
+            </a>
+            <a href="#team" class="btn btn-secondary magnetic-btn">
+                <span>Kenali Tim (5)</span> <i class="fas fa-users"></i>
+            </a>
+        </div>
+
+        <!-- HERO QUICK STATS -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-num" data-target="5">0</div>
+                <div class="stat-label">Anggota Tim</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-num" data-target="5">0</div>
+                <div class="stat-label">Karya Pilihan</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-num" data-target="100">0</div>
+                <div class="stat-label">% Fokus Desain</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFINITE MARQUEE TICKER -->
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <span>LOGO UMKM</span> <span class="star">✦</span>
+            <span>IDENTITAS BRAND</span> <span class="star">✦</span>
+            <span>DESAIN POSTER</span> <span class="star">✦</span>
+            <span>BANNER PROMOSI</span> <span class="star">✦</span>
+            <span>KEMASAN PRODUK</span> <span class="star">✦</span>
+            <span>KONTEN MEDIA SOSIAL</span> <span class="star">✦</span>
+            <span>LOGO UMKM</span> <span class="star">✦</span>
+            <span>IDENTITAS BRAND</span> <span class="star">✦</span>
+            <span>DESAIN POSTER</span> <span class="star">✦</span>
+            <span>BANNER PROMOSI</span> <span class="star">✦</span>
+            <span>KEMASAN PRODUK</span> <span class="star">✦</span>
+            <span>KONTEN MEDIA SOSIAL</span> <span class="star">✦</span>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about section-reveal">
+        <div class="section-tag">MANIFESTO</div>
+        <h2 class="section-title">Satu Tim, Satu Fokus: Desain</h2>
+        <div class="about-grid">
+            <div class="about-card about-manifesto">
+                <p class="highlight-text">
+                    "Brand yang mudah diingat dimulai dari visual yang punya cerita dan karakter."
+                </p>
+                <p>
+                    Karta Studio didirikan oleh Rafi, Haryo, Zidan, Fadlan, dan Reyvan. Kami berfokus membantu usaha dan brand lokal tampil lebih konsisten melalui desain grafis yang menarik, jelas, dan sesuai karakter bisnis.
+                </p>
+            </div>
+            <div class="about-card about-values">
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-bolt"></i></div>
+                    <div>
+                        <h4>Berkarakter</h4>
+                        <p>Setiap visual dirancang agar punya ciri khas dan mudah dikenali pelanggan.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-layer-group"></i></div>
+                    <div>
+                        <h4>Konsisten</h4>
+                        <p>Logo, warna, tipografi, dan materi promosi disusun dalam satu identitas brand.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-award"></i></div>
+                    <div>
+                        <h4>Siap Digunakan</h4>
+                        <p>Desain disiapkan untuk kebutuhan cetak maupun publikasi digital usaha Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services section-reveal">
+        <div class="section-tag">CAPABILITIES</div>
+        <h2 class="section-title">Layanan Desain Karta</h2>
+        <p class="section-subtitle">Dari logo hingga materi promosi, semua kebutuhan visual brand dalam satu studio.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-num">01</div>
+                <div class="service-icon"><i class="fas fa-palette"></i></div>
+                <h3>Logo & Identitas Brand</h3>
+                <p>Pembuatan logo dan panduan visual sederhana untuk membantu UMKM tampil konsisten dan mudah dikenali.</p>
+                <div class="service-tags">
+                    <span>Logo UMKM</span>
+                    <span>Palet Warna</span>
+                    <span>Tipografi</span>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-num">02</div>
+                <div class="service-icon"><i class="fas fa-image"></i></div>
+                <h3>Poster Promosi</h3>
+                <p>Visual promosi untuk produk, menu, acara, dan penawaran khusus dengan informasi yang mudah dibaca.</p>
+                <div class="service-tags">
+                    <span>Poster Produk</span>
+                    <span>Poster Event</span>
+                    <span>Flyer</span>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-num">03</div>
+                <div class="service-icon"><i class="fas fa-rectangle-ad"></i></div>
+                <h3>Banner & Spanduk</h3>
+                <p>Desain banner toko dan promosi yang kuat secara visual, baik untuk dipasang di lokasi usaha maupun dibagikan online.</p>
+                <div class="service-tags">
+                    <span>Banner Toko</span>
+                    <span>Spanduk Promosi</span>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-num">04</div>
+                <div class="service-icon"><i class="fas fa-box-open"></i></div>
+                <h3>Kemasan & Label Produk</h3>
+                <p>Tampilan kemasan dan label yang menarik serta selaras dengan karakter produk dan identitas brand.</p>
+                <div class="service-tags">
+                    <span>Label Produk</span>
+                    <span>Desain Kemasan</span>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-num">05</div>
+                <div class="service-icon"><i class="fas fa-hashtag"></i></div>
+                <h3>Konten Visual Media Sosial</h3>
+                <p>Template dan materi grafis untuk feed, story, serta promosi produk agar tampilan media sosial usaha tetap rapi.</p>
+                <div class="service-tags">
+                    <span>Feed & Story</span>
+                    <span>Konten Promo</span>
+                    <span>Template Brand</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SQUAD / TEAM SECTION (5 PERSON COLLECTIVE) -->
+    <section id="team" class="team section-reveal">
+        <div class="section-tag">TIM KARTA</div>
+        <h2 class="section-title">Lima Kreator, Satu Studio</h2>
+        <p class="section-subtitle">Lima orang di balik proses kreatif dan setiap karya visual Karta Studio.</p>
+
+        <div class="team-grid">
+            <!-- 1. RAFI -->
+            <div class="team-card tilt-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="avatar-3d-box">
+                    <div class="avatar-3d-frame frame-rafi">
+                        <div class="frame-glass-shine"></div>
+                        <img src="images/Raffi.jpeg" alt="Muhammad Raffi Akbar - Creative Director" class="team-avatar-img">
+                    </div>
+                    <span class="role-badge"><i class="fas fa-compass"></i> Director</span>
+                </div>
+                <h3>Muhammad Raffi Akbar</h3>
+                <p class="role">Creative Director</p>
+                <p class="bio">Menjaga desain kita selalu bagus, dan memastikan identitas visual tampil berkarakter kuat.</p>
+                <div class="skills-chips">
+                    <span>Branding</span>
+                    <span>Ideation</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/mhmdrafiiia_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- 2. HARYO -->
+            <div class="team-card tilt-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="avatar-3d-box">
+                    <div class="avatar-3d-frame frame-haryo">
+                        <div class="frame-glass-shine"></div>
+                        <img src="images/Haryo.jpeg" alt="Haryo Basithu Priyono - Desainer Layout dan Produksi" class="team-avatar-img">
+                    </div>
+                    <span class="role-badge"><i class="fas fa-pen-ruler"></i> Layout</span>
+                </div>
+                <h3>Haryo Basithu Priyono</h3>
+                <p class="role">Desainer Layout & Produksi</p>
+                <p class="bio">Menyusun komposisi, tata letak, dan kesiapan file desain untuk kebutuhan promosi cetak maupun digital.</p>
+                <div class="skills-chips">
+                    <span>Layout</span>
+                    <span>Tipografi</span>
+                    <span>Produksi Desain</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/haryo_binz" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- 3. ZIDANE -->
+            <div class="team-card tilt-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="avatar-3d-box">
+                    <div class="avatar-3d-frame frame-zidan">
+                        <div class="frame-glass-shine"></div>
+                        <img src="images/Zidan.jpeg" alt="Muhammad Zidan - Pengembang Konsep Visual" class="team-avatar-img">
+                    </div>
+                    <span class="role-badge"><i class="fas fa-lightbulb"></i> Konsep</span>
+                </div>
+                <h3>Muhammad Zidane</h3>
+                <p class="role">Pengembang Konsep Visual</p>
+                <p class="bio">Mengolah kebutuhan usaha menjadi ide visual dan konsep promosi yang menarik perhatian.</p>
+                <div class="skills-chips">
+                    <span>Konsep Kreatif</span>
+                    <span>Riset Referensi</span>
+                    <span>Visual Promosi</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/444znd_ " target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- 4. FADLAN -->
+            <div class="team-card tilt-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="avatar-3d-box">
+                    <div class="avatar-3d-frame frame-fadlan">
+                        <div class="frame-glass-shine"></div>
+                        <img src="images/Fadlan.jpeg" alt="Muhammad Fadlan Sumartono - Desainer Grafis" class="team-avatar-img">
+                    </div>
+                    <span class="role-badge"><i class="fas fa-pen-nib"></i> Grafis</span>
+                </div>
+                <h3>Muhammad Fadlan Sumartono</h3>
+                <p class="role">Desainer Grafis</p>
+                <p class="bio">Membuat logo, poster, dan materi promosi dengan komposisi warna serta tipografi yang kuat.</p>
+                <div class="skills-chips">
+                    <span>Desain Logo</span>
+                    <span>Desain Poster</span>
+                    <span>Canva</span>
+                    <span>Photoshop</span>
+                    <span>Identitas Brand</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- 5. REYVAN -->
+            <div class="team-card tilt-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="avatar-3d-box">
+                    <div class="avatar-3d-frame frame-reyvan">
+                        <div class="frame-glass-shine"></div>
+                        <img src="images/Reyvan.jpeg" alt="Reyvan Dwi Herwanto - Desainer Materi Promosi" class="team-avatar-img">
+                    </div>
+                    <span class="role-badge"><i class="fas fa-image"></i> Visual</span>
+                </div>
+                <h3>Reyvan Dwi Herwanto</h3>
+                <p class="role">Desainer Materi Promosi</p>
+                <p class="bio">Mengembangkan visual banner, konten media sosial, dan materi promosi yang konsisten dengan brand.</p>
+                <div class="skills-chips">
+                    <span>Banner</span>
+                    <span>Konten Sosial</span>
+                    <span>Fotografi Produk</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/reyvan.dh" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION (INTERACTIVE BENTO GRID + FILTER) -->
+    <section id="portfolio" class="portfolio section-reveal">
+        <div class="section-tag">PORTOFOLIO DESAIN</div>
+        <h2 class="section-title">Karya Visual Pilihan</h2>
+        <p class="section-subtitle">Logo, banner, dan poster promosi yang dirancang untuk membangun karakter brand.</p>
+
+        <!-- FILTER BUTTONS -->
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">Semua Karya</button>
+            <button class="filter-btn" data-filter="branding">Logo & Brand</button>
+            <button class="filter-btn" data-filter="banner">Banner</button>
+            <button class="filter-btn" data-filter="poster">Poster</button>
+        </div>
+
+        <!-- BENTO GRID -->
+        <div class="bento-grid">
+            <!-- Logo and brand identity -->
+            <div class="bento-item item-medium" data-category="branding" onclick="scrollToIdentity()">
+                <div class="bento-preview">
+                    <img src="images/karta-studio-logo.svg" alt="Logo Karta Studio" class="bento-img">
+                    <div class="preview-badge"><i class="fas fa-bolt"></i> Identitas Karta</div>
+                </div>
+                <div class="bento-content">
+                    <div class="meta-row">
+                        <span class="tag">Logo & Identitas Brand</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <h3>Logo & Identitas Karta Studio</h3>
+                    <p>Logo resmi studio dengan simbol petir, nama Karta Studio, dan aksen warna khas.</p>
+                    <div class="item-link highlight-link">Lihat Identitas Brand <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+
+            <!-- UMKM logo concept study -->
+            <div class="bento-item item-small" data-category="branding" onclick="openProjectModal('Konsep Logo Kopi Rona', 'Konsep Logo UMKM', 'Studi konsep logo untuk contoh brand kedai kopi lokal. Bentuk biji kopi dan warna hangat dipilih untuk membangun kesan akrab. Ini adalah contoh desain, bukan proyek klien.', 'Studi konsep identitas visual', 'images/logo-kopi-rona.svg')">
+                <div class="bento-preview">
+                    <img src="images/logo-kopi-rona.svg" alt="Contoh konsep logo UMKM Kopi Rona" class="bento-img">
+                    <div class="preview-badge"><i class="fas fa-mug-hot"></i> Konsep Logo UMKM</div>
+                </div>
+                <div class="bento-content">
+                    <div class="meta-row">
+                        <span class="tag">Studi Konsep</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <h3>Konsep Logo Kopi Rona</h3>
+                    <p>Contoh konsep logo sederhana untuk kedai kopi lokal, dengan simbol biji kopi dan palet warna hangat.</p>
+                    <div class="item-link">Lihat Detail Konsep <i class="fas fa-arrow-up-right-from-square"></i></div>
+                </div>
+            </div>
+
+            <!-- Promotional banner -->
+            <div class="bento-item item-small" data-category="banner" onclick="openProjectModal('Desain Banner Promosi', 'Banner & Materi Promosi', 'Eksplorasi desain banner promosi dengan fokus pada pesan utama, hierarki informasi, dan tampilan visual yang mudah menarik perhatian.', 'Adobe Photoshop, Illustrator, & Canva', 'images/Banner.jpeg')">
+                <div class="bento-preview">
+                    <img src="images/Banner.jpeg" alt="Contoh desain banner promosi Karta Studio" class="bento-img">
+                    <div class="preview-badge"><i class="fas fa-rectangle-ad"></i> Banner Promosi</div>
+                </div>
+                <div class="bento-content">
+                    <div class="meta-row">
+                        <span class="tag">Banner & Materi Promosi</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <h3>Desain Banner Promosi</h3>
+                    <p>Komposisi grafis promosi yang siap diadaptasi untuk kebutuhan cetak maupun digital.</p>
+                    <div class="item-link">Lihat Detail Desain <i class="fas fa-arrow-up-right-from-square"></i></div>
+                </div>
+            </div>
+
+            <!-- UMKM food promotion poster -->
+            <div class="bento-item item-large" data-category="poster" onclick="openProjectModal('Mas Potato — Poster Promosi Produk', 'Poster & Promosi UMKM', 'Desain poster promosi untuk produk Mas Potato dengan visual produk yang menggugah selera, tipografi yang jelas, dan penempatan informasi harga serta penawaran secara terstruktur.', 'Adobe Photoshop, Illustrator, & Canva', 'images/poster-mas-potato.jpg')">
+                <div class="bento-preview preview-poster-box">
+                    <img src="images/poster-mas-potato.jpg" alt="Mas Potato Poster Design" class="bento-img bento-poster-img">
+                    <div class="preview-badge"><i class="fas fa-bullhorn"></i> Campaign Poster</div>
+                    <div class="poster-inspect-overlay">
+                        <span><i class="fas fa-search-plus"></i> Klik untuk Melihat Detail Poster</span>
+                    </div>
+                </div>
+                <div class="bento-content">
+                    <div class="meta-row">
+                        <span class="tag">Poster & Promosi UMKM</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <h3>Mas Potato — Poster Promosi</h3>
+                    <p>Poster produk makanan dengan komposisi visual yang menggugah selera dan informasi promo yang mudah dibaca.</p>
+                    <div class="item-link">Lihat Detail Desain <i class="fas fa-arrow-up-right-from-square"></i></div>
+                </div>
+            </div>
+
+            <!-- UMKM iced tea promotion poster -->
+            <div class="bento-item item-small" data-category="poster" onclick="openProjectModal('Es Teh Senja — Poster Promo Minuman', 'Poster Promosi UMKM', 'Konsep poster promosi untuk usaha minuman Es Teh Senja. Palet hijau dan jingga, ilustrasi gelas es teh, serta informasi harga dibuat menonjol agar karakter produk mudah dikenali.', 'Studi konsep desain grafis', 'images/poster-es-teh-senja.svg')">
+                <div class="bento-preview">
+                    <img src="images/poster-es-teh-senja.svg" alt="Contoh poster promo Es Teh Senja untuk UMKM minuman" class="bento-img">
+                    <div class="preview-badge"><i class="fas fa-mug-hot"></i> Poster UMKM Minuman</div>
+                </div>
+                <div class="bento-content">
+                    <div class="meta-row">
+                        <span class="tag">Poster Promosi UMKM</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <h3>Es Teh Senja — Poster Promo</h3>
+                    <p>Konsep poster minuman dengan warna segar, ilustrasi produk, dan harga promo yang mudah terlihat.</p>
+                    <div class="item-link">Lihat Detail Desain <i class="fas fa-arrow-up-right-from-square"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KARTA IDENTITY SECTION -->
+    <section id="identity" class="identity-section section-reveal">
+        <div class="section-tag">IDENTITAS VISUAL</div>
+        <h2 class="section-title"><span class="gradient-text">KARTA IDENTITY</span></h2>
+        <p class="section-subtitle">Contoh penerapan logo, warna, tipografi, dan elemen grafis dalam satu identitas brand.</p>
+
+        <!-- IDENTITY TABS NAVIGATION -->
+        <div class="identity-tabs">
+            <button class="id-tab-btn active" data-tab="logo">
+                <i class="fas fa-bolt"></i> <span>Logo Karta</span>
+            </button>
+            <button class="id-tab-btn" data-tab="warna">
+                <i class="fas fa-palette"></i> <span>Warna Karta</span>
+            </button>
+            <button class="id-tab-btn" data-tab="font">
+                <i class="fas fa-font"></i> <span>Font Karta</span>
+            </button>
+            <button class="id-tab-btn" data-tab="elemen">
+                <i class="fas fa-cubes"></i> <span>Elemen Visual Karta</span>
+            </button>
+        </div>
+
+        <!-- IDENTITY TAB CONTENT PANELS -->
+        <div class="identity-content">
+
+            <!-- 1. TAB: LOGO KARTA -->
+            <div class="id-panel active" id="panel-logo">
+                <div class="identity-grid-2">
+                    <div class="id-card logo-showcase-card">
+                        <div class="logo-display-box">
+                            <img src="images/karta-studio-logo.svg" alt="Logo Karta Studio dengan simbol petir" class="logo-full-img">
+                        </div>
+                        <div class="logo-variants-row">
+                            <div class="variant-item">
+                                <img src="images/karta-mark.svg" alt="Ikon petir Karta Studio" class="variant-thumb">
+                                <span>Ikon Petir — untuk avatar & ikon kecil</span>
+                            </div>
+                            <div class="variant-item">
+                                <img src="images/karta-monogram.svg" alt="Monogram Karta Studio" class="variant-thumb">
+                                <span>Monogram K — untuk stempel & favicon</span>
+                            </div>
+                            <div class="variant-item dark-pill">
+                                <span class="pill-text">⚡ KARTA.STUDIO</span>
+                                <span>Wordmark — untuk header & materi promosi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="id-card logo-philosophy-card">
+                        <h3>Filosofi & Anatomi Logo</h3>
+                        <p class="desc-text">Logo Karta Studio dirancang sebagai manifestasi energi modern di industri kreatif yang cepat, adaptif, dan berorientasi dampak nyata.</p>
+                        
+                        <div class="philosophy-list">
+                            <div class="phil-item">
+                                <div class="phil-icon"><i class="fas fa-bolt"></i></div>
+                                <div>
+                                    <h4>Simbol Petir (The Spark)</h4>
+                                    <p>Melambangkan letupan ide orisinil, kecepatan eksekusi, serta energi dinamis lima kepala kreatif.</p>
+                                </div>
+                            </div>
+
+                            <div class="phil-item">
+                                <div class="phil-icon"><i class="fas fa-shapes"></i></div>
+                                <div>
+                                    <h4>Kata "KARTA"</h4>
+                                    <p>Berasal dari akar kata Nusantara yang berarti <em>karya, mencipta, dan tatanan luhur</em>.</p>
+                                </div>
+                            </div>
+
+                            <div class="phil-item">
+                                <div class="phil-icon"><i class="fas fa-circle-dot"></i></div>
+                                <div>
+                                    <h4>Titik Aksen (.STUDIO)</h4>
+                                    <p>Fokus presisi dan titik temu antara estetika seni rupa dengan teknologi komputasi modern.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. TAB: WARNA (COLOR PALETTE) -->
+            <div class="id-panel" id="panel-warna">
+                <div class="colors-intro">
+                    <h3>Sistem Palet Warna Karta Studio</h3>
+                    <p>Klik pada swatch warna mana saja untuk menyalin kode HEX langsung ke clipboard Anda.</p>
+                </div>
+
+                <div class="swatches-grid">
+                    <!-- Color 1: Cyber Cyan -->
+                    <div class="swatch-card" onclick="copyColor('#38BDF8', 'Cyber Cyan')">
+                        <div class="swatch-color" style="background: #38bdf8;">
+                            <span class="copy-hint"><i class="fas fa-copy"></i> Copy HEX</span>
+                        </div>
+                        <div class="swatch-info">
+                            <h4>Cyber Cyan</h4>
+                            <div class="hex-badge">#38BDF8</div>
+                            <p>RGB(56, 189, 248) · Aksen utama dan kesan segar</p>
+                        </div>
+                    </div>
+
+                    <!-- Color 2: Electric Indigo -->
+                    <div class="swatch-card" onclick="copyColor('#818CF8', 'Electric Indigo')">
+                        <div class="swatch-color" style="background: #818cf8;">
+                            <span class="copy-hint"><i class="fas fa-copy"></i> Copy HEX</span>
+                        </div>
+                        <div class="swatch-info">
+                            <h4>Electric Indigo</h4>
+                            <div class="hex-badge">#818CF8</div>
+                            <p>RGB(129, 140, 248) · Kesan kreatif dan modern</p>
+                        </div>
+                    </div>
+
+                    <!-- Color 3: Neon Coral -->
+                    <div class="swatch-card" onclick="copyColor('#F43F5E', 'Neon Coral')">
+                        <div class="swatch-color" style="background: #f43f5e;">
+                            <span class="copy-hint"><i class="fas fa-copy"></i> Copy HEX</span>
+                        </div>
+                        <div class="swatch-info">
+                            <h4>Neon Coral</h4>
+                            <div class="hex-badge">#F43F5E</div>
+                            <p>RGB(244, 63, 94) · Aksen berani untuk promosi</p>
+                        </div>
+                    </div>
+
+                    <!-- Color 4: Solar Amber -->
+                    <div class="swatch-card" onclick="copyColor('#EAB308', 'Solar Amber')">
+                        <div class="swatch-color" style="background: #eab308;">
+                            <span class="copy-hint"><i class="fas fa-copy"></i> Copy HEX</span>
+                        </div>
+                        <div class="swatch-info">
+                            <h4>Solar Amber</h4>
+                            <div class="hex-badge">#EAB308</div>
+                            <p>RGB(234, 179, 8) · Kesan hangat dan menonjol</p>
+                        </div>
+                    </div>
+
+                    <!-- Color 5: Deep Obsidian -->
+                    <div class="swatch-card" onclick="copyColor('#070A12', 'Deep Obsidian')">
+                        <div class="swatch-color" style="background: #070a12; border: 1px solid rgba(255,255,255,0.15);">
+                            <span class="copy-hint"><i class="fas fa-copy"></i> Copy HEX</span>
+                        </div>
+                        <div class="swatch-info">
+                            <h4>Deep Obsidian</h4>
+                            <div class="hex-badge">#070A12</div>
+                            <p>RGB(7, 10, 18) · Latar gelap untuk kontras visual</p>
+                        </div>
+                    </div>
+
+                    <!-- Color 6: Slate Glass -->
+                    <div class="swatch-card" onclick="copyColor('#0F172A', 'Slate Glass')">
+                        <div class="swatch-color" style="background: #0f172a; border: 1px solid rgba(255,255,255,0.15);">
+                            <span class="copy-hint"><i class="fas fa-copy"></i> Copy HEX</span>
+                        </div>
+                        <div class="swatch-info">
+                            <h4>Slate Glass</h4>
+                            <div class="hex-badge">#0F172A</div>
+                            <p>RGB(15, 23, 42) · Warna bidang pendukung</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. TAB: FONT (TYPOGRAPHY) -->
+            <div class="id-panel" id="panel-font">
+                <div class="identity-grid-2">
+                    <div class="id-card">
+                        <div class="font-header-badge">Display & Headings</div>
+                        <h3 class="font-sample-title font-space">Space Grotesk</h3>
+                        <p class="font-specs">Weight: 700 Bold / 500 Medium · Tegas dan mudah dikenali</p>
+                        <div class="alphabet-specimen font-space">
+                            ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                            abcdefghijklmnopqrstuvwxyz<br>
+                            0123456789 • !@#$%^&*()
+                        </div>
+                        <div class="font-usage-note">
+                            <strong>Penggunaan:</strong> Logo, judul poster, headline banner, dan nama brand.
+                        </div>
+                    </div>
+
+                    <div class="id-card">
+                        <div class="font-header-badge">Body & UI Ergonomics</div>
+                        <h3 class="font-sample-title font-jakarta">Plus Jakarta Sans</h3>
+                        <p class="font-specs">Weight: 400 Regular / 600 SemiBold / 800 ExtraBold · Jelas dan nyaman dibaca</p>
+                        <div class="alphabet-specimen font-jakarta">
+                            ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                            abcdefghijklmnopqrstuvwxyz<br>
+                            0123456789 • !@#$%^&*()
+                        </div>
+                        <div class="font-usage-note">
+                            <strong>Penggunaan:</strong> Informasi produk, keterangan promo, dan teks pendukung desain.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LIVE FONT PLAYGROUND -->
+                <div class="font-playground-card">
+                    <h4><i class="fas fa-keyboard"></i> Coba Tipografi Interaktif</h4>
+                    <p>Ketik nama brand atau kalimat promosi untuk membandingkan kedua tipografi:</p>
+                    <input type="text" id="font-test-input" value="Karta Studio — Desain untuk Brand Lokal" class="font-tester-input">
+                    <div class="font-test-output">
+                        <div class="output-row">
+                            <span class="output-label">Space Grotesk:</span>
+                            <div id="output-space" class="font-space output-text">Karta Studio — Desain untuk Brand Lokal</div>
+                        </div>
+                        <div class="output-row">
+                            <span class="output-label">Plus Jakarta Sans:</span>
+                            <div id="output-jakarta" class="font-jakarta output-text">Karta Studio — Desain untuk Brand Lokal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. TAB: ELEMEN VISUAL -->
+            <div class="id-panel" id="panel-elemen">
+                <div class="elements-grid">
+                    <div class="element-card">
+                        <div class="element-icon-box"><i class="fas fa-shapes"></i></div>
+                        <h3>Komposisi Visual</h3>
+                        <p>Pengaturan logo, foto produk, dan elemen grafis agar pesan promosi terlihat jelas dan menarik.</p>
+                        <div class="element-preview-chip chip-3d">
+                            <span>Visual yang Seimbang</span>
+                        </div>
+                    </div>
+
+                    <div class="element-card">
+                        <div class="element-icon-box"><i class="fas fa-border-all"></i></div>
+                        <h3>Tata Letak yang Jelas</h3>
+                        <p>Susunan informasi produk, harga, dan kontak yang membantu pelanggan memahami penawaran dengan cepat.</p>
+                        <div class="element-preview-chip chip-bento">
+                            <span>Informasi Mudah Dibaca</span>
+                        </div>
+                    </div>
+
+                    <div class="element-card">
+                        <div class="element-icon-box"><i class="fas fa-palette"></i></div>
+                        <h3>Warna & Tipografi</h3>
+                        <p>Paduan warna dan huruf yang sesuai karakter brand, sekaligus menjaga keterbacaan pada poster dan banner.</p>
+                        <div class="element-preview-chip chip-glass">
+                            <span>Palet Brand Konsisten</span>
+                        </div>
+                    </div>
+
+                    <div class="element-card">
+                        <div class="element-icon-box"><i class="fas fa-store"></i></div>
+                        <h3>Identitas Brand UMKM</h3>
+                        <p>Penerapan identitas yang senada pada logo, kemasan, banner toko, dan konten media sosial usaha.</p>
+                        <div class="element-preview-chip chip-particles">
+                            <span>Satu Identitas, Banyak Media</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERACTIVE MODAL FOR PROJECT DETAIL -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-backdrop" onclick="closeProjectModal()"></div>
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+            <div class="modal-img-container" id="modal-img-container" style="display:none;">
+                <img id="modal-img" class="modal-project-img" src="" alt="Project Preview">
+            </div>
+            <span class="tag" id="modal-tag">Category</span>
+            <h2 id="modal-title">Project Title</h2>
+            <p id="modal-desc">Detail karya desain Karta Studio.</p>
+            <div class="modal-meta">
+                <strong>Tools / Stack:</strong> <span id="modal-stack">Technologies</span>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="closeProjectModal()">Tutup Detail Karya</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact section-reveal">
+        <div class="contact-card">
+            <div class="contact-header">
+                <div class="section-tag">KONSULTASI DESAIN</div>
+                <h2>Wujudkan Tampilan <span class="gradient-text">Brand Anda.</span></h2>
+                <p>Butuh logo UMKM, poster, banner, atau materi promosi? Ceritakan kebutuhan desain Anda kepada tim Karta Studio.</p>
+            </div>
+
+            <form class="contact-form" id="contact-form" action="Studio Karta Php/Dashboard.Php" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" maxlength="100" placeholder="cth. John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" name="email" maxlength="254" placeholder="nama@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service-interest">Layanan Yang Dibutuhkan</label>
+                    <select id="service-interest" name="service" required>
+                        <option value="Logo & Identitas Brand">Logo & Identitas Brand UMKM</option>
+                        <option value="Poster Promosi">Poster Produk / Promosi</option>
+                        <option value="Banner & Spanduk">Banner / Spanduk Usaha</option>
+                        <option value="Kemasan & Label Produk">Kemasan & Label Produk</option>
+                        <option value="Konten Visual Media Sosial">Konten Visual Media Sosial</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Ceritakan Ide Proyek Anda</label>
+                    <textarea id="message" name="message" rows="4" maxlength="5000" placeholder="Ceritakan nama usaha, jenis desain yang dibutuhkan, dan ide visualnya..." required></textarea>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary btn-submit magnetic-btn">
+                        <span>Kirim Permintaan Desain</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <a href="https://wa.me/689628057791?text=Halo%20Karta%20Studio!%20Saya%20tertarik%20dengan%20jasa%20desain%20grafis" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-wa magnetic-btn">
+                        <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">⚡ KARTA<span class="dot">.</span>STUDIO</div>
+                <p>Studio desain grafis untuk logo, identitas brand, poster, banner, dan materi promosi UMKM.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Navigasi</h4>
+                <a href="#about">Tentang Karta</a>
+                <a href="#services">Layanan Desain</a>
+                <a href="#team">Tim Kreatif (5)</a>
+                <a href="#portfolio">Karya Pilihan</a>
+            </div>
+            <div class="footer-team">
+                <h4>Tim Desain Karta</h4>
+                <p>Rafi • Haryo • Zidan • Fadlan • Reyvan</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Karta Studio. Crafted with obsession by Rafi, Haryo, Zidan, Fadlan, & Reyvan.</p>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toast">
+        <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="toast-msg" id="toast-msg">Pesan berhasil dikirim!</div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
